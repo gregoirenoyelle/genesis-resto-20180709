@@ -4,18 +4,19 @@
 /* Champs ACF
 texte chapeau: resto_texte_chapeau
 taille police: resto_taille_police
+couleur police: resto_couleur_chapeau
 */
 
 // Afficher le châpeau après le titre
 function resto_chapeau_apres_titre() {
 	
 	// Première écriture ligne par ligne
-	// echo '<p>';
-	// echo get_field('resto_texte_chapeau');
-	// echo '</p>';
+	echo '<p>';
+	echo get_field('resto_texte_chapeau');
+	echo '</p>';
 
 	// Deuxième écriture avec la concaténation "." (bâton de colle)
-	// echo '<p>' . get_field('resto_texte_chapeau') . '</p>';
+	echo '<p>' . get_field('resto_texte_chapeau') . '</p>';
 
 	// Troisième écriture avec la fonction PHP printf
 	$classe = "chapeau"; 
