@@ -76,6 +76,7 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 //* Add Image Sizes
 add_image_size( 'featured-image', 720, 400, TRUE );
 add_image_size( 'cuisinier', 650, 650, TRUE );
+add_image_size( 'cuisto', 150, 200, array('right', 'bottom') );
 
 //* Rename primary and secondary navigation menus
 add_theme_support( 'genesis-menus' , array( 'primary' => __( 'After Header Menu', 'genesis-sample' ), 'secondary' => __( 'Footer Menu', 'genesis-sample' ) ) );
