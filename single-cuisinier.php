@@ -5,6 +5,12 @@
 function resto_contenu_cuisinier() {
 	// Variables
 	$html = '';
+	$img_id = get_field('cuisto_photo');
+	// Formats d'image: thumbnail, medium, large, full OU format sur mesure
+	$img = wp_get_attachment_image( $img_id, 'full' );
+
+	// Affichage de la photo
+	$html .= sprintf( '<section class="photo-cuisto">%s</section>' , $img );
 
 	// Affichage de la bio longue
 	$html .= '<section class="bio-cuisto">';
