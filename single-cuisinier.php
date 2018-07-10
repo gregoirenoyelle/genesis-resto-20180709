@@ -4,10 +4,13 @@
 
 function resto_contenu_cuisinier() {
 	// Variables
-	$html = 'toto';
+	$html = '';
 
 	// Affichage de la bio longue
-	$html .= 'tintin';
+	$html .= '<section class="bio-cuisto">';
+		$html .= '<h3>Biographie</h3>';
+		$html .= get_field('cuisto_bio_longue');
+	$html .= '</section>';
 
 
 	// Affichage du HTML
