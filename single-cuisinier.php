@@ -12,6 +12,15 @@ function resto_contenu_cuisinier() {
 		$html .= get_field('cuisto_bio_longue');
 	$html .= '</section>';
 
+	// Affichage 	
+	$html .= '<section class="info-contact">';
+		$html .= '<h3>Contacts</h3>';
+		$html .= '<ul>';
+			$html .= sprintf( '<li><a href="%s" target="_blank">Site Internet</a></li>', get_field('cuisto_site_internet') );
+			$html .= sprintf( '<li><a href="%s">Bio en PDF</a></li>', get_field('cuisto_bio_pdf') );
+			$html .= sprintf( '<li><a href="mailto:%s">Envoyer un mail</a></li>', get_field('cuisto_email') );
+		$html .= '</ul>';
+	$html .= '</section>';
 
 	// Affichage du HTML
 	echo $html;
