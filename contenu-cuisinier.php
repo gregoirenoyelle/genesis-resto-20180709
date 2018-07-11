@@ -19,12 +19,12 @@ function resto_contenu_cuisinier() {
 	// Formats d'image: thumbnail, medium, large, full OU format sur mesure
 	$img = wp_get_attachment_image( $img_id, 'cuisinier' );
 	$permalien = get_permalink();
-	d($permalien);
+	// d(get_fields());
 
 	// Affichage de la photo
 	$html .= sprintf( '<section class="photo-cuisto">%s</section>' , $img );
 
-	// Affichage de la bio longue
+	// Affichage de la bio
 	$html .= '<section class="bio-cuisto">';
 		$html .= '<h3>Biographie</h3>';
 
@@ -33,6 +33,7 @@ function resto_contenu_cuisinier() {
 			$html .= get_field('cuisto_bio_longue');
 		} else {
 			$html .= get_field('cuisto_bio_courte');
+			$html .= sprintf( '<p class="lire-suite"><a href="%s">Lire la site</a></p>', $permalien );
 		}
 		
 	$html .= '</section>';
