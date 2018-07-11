@@ -15,4 +15,18 @@ function ajouter_video() {
 }
 add_action('genesis_before_loop', 'ajouter_video', 9);
 
+
+
+// Appeler la zone de widget
+// Affichage de la zone de Widget home-top
+function resto_widget_cuisinier() {
+	if ( in_category('brasseries') ) {
+		genesis_widget_area( 'fiche-cuisinier', array(
+			'before' => '<div class="entry widget-area widget-cuisinier">',
+			'after'  => '</div>',
+		) );
+	}
+}
+add_action('genesis_after_entry', 'resto_widget_cuisinier' );
+
 genesis();
