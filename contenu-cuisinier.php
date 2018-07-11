@@ -21,8 +21,15 @@ function resto_contenu_cuisinier() {
 	$permalien = get_permalink();
 	// d(get_fields());
 
-	// Affichage de la photo
-	$html .= sprintf( '<section class="photo-cuisto">%s</section>' , $img );
+	// Affichage de la photo avec une condition
+
+	if ( is_singular('cuisinier') ) {		
+		$html .= sprintf( '<section class="photo-cuisto">%s</section>' , $img );
+		
+	} else {
+		$html .= sprintf( '<section class="photo-cuisto"><a href="%s">%s</a></section>', $permalien , $img );;
+	}
+
 
 	// Affichage de la bio
 	$html .= '<section class="bio-cuisto">';
