@@ -1294,6 +1294,17 @@ a.alignright, img.alignright, .wp-caption.alignright {
     color: #eee;
 }
 
+/* Widget en bas de la fiche article */
+
+.widget-cuisinier .widget {
+	width: 46%;
+	float: left;
+}
+
+.widget-cuisinier .widget:nth-of-type(2n+1) {
+	float: right;
+}
+
 /* ## Entry Meta
 --------------------------------------------- */
 p.entry-meta {
