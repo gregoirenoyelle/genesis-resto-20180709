@@ -4,6 +4,14 @@
 remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 add_action( 'genesis_entry_footer', 'genesis_post_info', 12 );
 
+// Imposer la pleine largeur sur les archives
+if ( ! is_singular('cuisinier') ) {
+	// Maquette Pleine largeur
+	add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+}
+
+
+// Contenu de la fiche cuisinier
 function resto_contenu_cuisinier() {
 
 	// Contrôle si ACF est actif
