@@ -1250,7 +1250,7 @@ a.alignright, img.alignright, .wp-caption.alignright {
 ---------------------------------------------------------------------------------------------------- */
 /* ## Entries
 --------------------------------------------- */
-.post-type-archive-cuisiniers .content, .tax-etoile .content {
+.post-type-archive-cuisinier .content, .tax-etoile .content {
     border: 1px solid black;
 }
 
@@ -1260,13 +1260,15 @@ a.alignright, img.alignright, .wp-caption.alignright {
     padding: 70px 80px;
 }
 
-.post-type-archive-cuisiniers .entry, .tax-etoile .entry {
+.post-type-archive-cuisinier .entry, 
+.tax-etoile .entry {
     width: 48%;
     float: left;
     margin-right: 4%;
 }
 
-.post-type-archive-cuisiniers .entry:nth-of-type(2n+2), .tax-etoile .entry:nth-of-type(2n+2) {
+.post-type-archive-cuisinier .entry:nth-of-type(2n+2), 
+.tax-etoile .entry:nth-of-type(2n+2) {
     margin-right: initial;
 }
 
