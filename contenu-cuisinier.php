@@ -25,7 +25,14 @@ function resto_contenu_cuisinier() {
 	// Affichage de la bio longue
 	$html .= '<section class="bio-cuisto">';
 		$html .= '<h3>Biographie</h3>';
-		$html .= get_field('cuisto_bio_longue');
+		
+		// Condition pour affichage de la bio
+		if ( is_singular('cuisinier') ) {
+			$html .= get_field('cuisto_bio_longue');
+		} else {
+			$html .= get_field('cuisto_bio_courte');
+		}
+		
 	$html .= '</section>';
 
 	// Affichage 	
