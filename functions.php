@@ -138,6 +138,20 @@ genesis_register_sidebar( array(
 // 	wp_dequeue_style('sharedaddy');
 // }
 
+// Hook pour exécuter des conditions d'affichage
+add_action('genesis_meta', 'resto_condition_page');
+function resto_condition_page() {
+	// Condition sur modèle page modele-chapeau.php
+	if ( is_page_template( 'modele-chapeau.php' ) ) {
+		// Exit pour arrêter l'exécution du code
+		// exit;
+		add_action('genesis_entry_content', 'resto_texte_avant_contenu', 5);
+		function resto_texte_avant_contenu() {
+			echo '<p style="color: green;">Je suis sur le bon modèle</p>';
+		}
+		
+	}
+}
 
 
 
