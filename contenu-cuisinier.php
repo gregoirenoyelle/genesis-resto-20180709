@@ -1,6 +1,8 @@
 <?php
 
-// Contenu de la fiche cuisinier
+// déplacer les post info (date, auteur....)
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+add_action( 'genesis_entry_footer', 'genesis_post_info', 12 );
 
 function resto_contenu_cuisinier() {
 
