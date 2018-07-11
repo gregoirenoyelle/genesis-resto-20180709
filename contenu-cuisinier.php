@@ -18,6 +18,8 @@ function resto_contenu_cuisinier() {
 	$img_id = get_field('cuisto_photo');
 	// Formats d'image: thumbnail, medium, large, full OU format sur mesure
 	$img = wp_get_attachment_image( $img_id, 'cuisinier' );
+	$permalien = get_permalink();
+	d($permalien);
 
 	// Affichage de la photo
 	$html .= sprintf( '<section class="photo-cuisto">%s</section>' , $img );
@@ -25,7 +27,7 @@ function resto_contenu_cuisinier() {
 	// Affichage de la bio longue
 	$html .= '<section class="bio-cuisto">';
 		$html .= '<h3>Biographie</h3>';
-		
+
 		// Condition pour affichage de la bio
 		if ( is_singular('cuisinier') ) {
 			$html .= get_field('cuisto_bio_longue');
