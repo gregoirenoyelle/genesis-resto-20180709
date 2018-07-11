@@ -131,6 +131,14 @@ genesis_register_sidebar( array(
     'description' => 'Partie basse de la page d\'Accueil.',
 ) );
 
+// Zone de widget en bas de la fiche cuisinier
+genesis_register_sidebar( array(
+    'id'          => 'fiche-cuisinier',
+    'name'        => 'Fiche Cuisinier',
+    'description' => 'Métadonnées en bas de la fiche cuisinier.',
+) );
+
+
 
 // Pour enlever le CSS de partage
 // add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
