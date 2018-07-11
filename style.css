@@ -783,7 +783,7 @@ td:first-child, th:first-child {
     padding: 12px 30px;
 }
 
-.post-type-archive-cuisiniers .breadcrumb, .tax-etoile .breadcrumb, .post-type-archive-cuisiniers .archive-description, .tax-etoile .archive-description {
+.post-type-archive-cuisinier .breadcrumb, .tax-etoile .breadcrumb, .post-type-archive-cuisinier .archive-description, .tax-etoile .archive-description {
     display: none;
 }
 
@@ -1732,7 +1732,7 @@ p.entry-meta {
 }
 
 @media only screen and ( max-width: 550px ) {
-    .post-type-archive-cuisiniers .entry, .tax-etoile .entry {
+    .post-type-archive-cuisinier .entry, .tax-etoile .entry {
         width: 100%;
         float: initial;
         margin-right: initial;
