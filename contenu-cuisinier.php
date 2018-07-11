@@ -3,6 +3,16 @@
 // Contenu de la fiche cuisinier
 
 function resto_contenu_cuisinier() {
+
+	// Contrôle si ACF est actif
+	if ( ! function_exists('get_field')) {
+		echo '<h1 style="color: red;">Attention vous devez activer ACF dans votre site</h1>';
+		return;
+	} 
+
+	// If sur une ligne
+	// if ( ! function_exists('get_field')) return;
+
 	// Variables
 	$html = '';
 	$img_id = get_field('cuisto_photo');
