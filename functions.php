@@ -161,6 +161,11 @@ function resto_condition_page() {
 	}
 }
 
+//* Fichier pour afficher tous les hooks
+// include_once( get_stylesheet_directory() . '/lib-gregoire/affichage-hooks.php' );
+
+
+
 
 
 
