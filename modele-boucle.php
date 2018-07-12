@@ -66,15 +66,17 @@ $ma_boucle = new WP_Query (
 ); // fin WP_Query 
 
 // d($ma_boucle);
-$html .= '<ul>';
 // Début de ma boucle
 while( $ma_boucle->have_posts() ) : 
 	$ma_boucle->the_post();
+	$img_id = get_field('cuisto_photo');
+	$img = wp_get_attachment_image( $img_id, 'large' );
+	// d($img_id);
 	// Cuisinier dans la boucle
-	$html .= sprintf( '<li><a href="%s">%s</a></li>', get_permalink(), get_the_title() );
+	$html .= sprintf( '<h3><a href="%s">%s</a></h3>', get_permalink(), get_the_title() );
+	$html .= sprintf( '<section class="cuisto-photo">%s</section>', $img );
 // Fin de ma boucle
 endwhile;
-$html .= '</ul>';
 
 // Afficher le HTML
 echo $html;
