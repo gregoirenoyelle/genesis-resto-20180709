@@ -61,7 +61,7 @@ $photo = get_field('resto_afficher_photo_cuisinier');
 $ma_boucle = new WP_Query (
 	array(
 		'post_type' => 'cuisinier',
-		'orderby' => 'title',
+		'orderby' => 'menu_order',
 		'order' => 'ASC',
 		'posts_per_page' => 500
 	)
