@@ -18,6 +18,7 @@ $ma_boucle = new WP_Query (
 	)
 ); // fin WP_Query 
 
+$html .= sprintf( '<h3>Article de la catégorie suivante: %s</h3>', get_cat_name($categorie) );
 // début loop $ma_boucle
 while ( $ma_boucle->have_posts() ) : $ma_boucle->the_post(); 
 	
