@@ -4,15 +4,17 @@
 add_action( 'genesis_entry_content', 'en_boucle_article', 15 );
 function en_boucle_article()  {
 // Variables
-$html = ''; 	
+$html = ''; 
+$categorie = get_field('resto_categorie_article');
+$nombre = get_field('resto_nombre_articles');
 
 // article du codex: http://codex.wordpress.org/Class_Reference/WP_Query
 $ma_boucle = new WP_Query (
 	array(
-		'cat' => 4,
+		'cat' => $categorie,
 		'orderby' => 'title',
 		'order' => 'ASC',
-		'posts_per_page' => 10
+		'posts_per_page' => $nombre
 	)
 ); // fin WP_Query 
 
