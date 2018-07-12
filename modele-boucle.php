@@ -54,6 +54,8 @@ function resto_boucle_cuisinier() {
 
 // Déclaration des variables
 $html = '';
+$photo = get_field('resto_afficher_photo_cuisinier');
+d(get_fields());
 
 // article du codex: http://codex.wordpress.org/Class_Reference/WP_Query
 $ma_boucle = new WP_Query (
@@ -65,16 +67,22 @@ $ma_boucle = new WP_Query (
 	)
 ); // fin WP_Query 
 
-// d($ma_boucle);
+d($photo);
+
 // Début de ma boucle
 while( $ma_boucle->have_posts() ) : 
 	$ma_boucle->the_post();
 	$img_id = get_field('cuisto_photo');
 	$img = wp_get_attachment_image( $img_id, 'large' );
-	// d($img_id);
+	d(get_fields());
+
+
 	// Cuisinier dans la boucle
 	$html .= sprintf( '<h3><a href="%s">%s</a></h3>', get_permalink(), get_the_title() );
-	$html .= sprintf( '<section class="cuisto-photo">%s</section>', $img );
+	if ( $photo ) {
+		$html .= sprintf( '<section class="cuisto-photo">%s</section>', $img );
+	}
+	
 // Fin de ma boucle
 endwhile;
 
