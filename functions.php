@@ -164,7 +164,7 @@ function resto_condition_page() {
 //* Fichier pour afficher tous les hooks
 // include_once( get_stylesheet_directory() . '/lib-gregoire/affichage-hooks.php' );
 include_once( get_stylesheet_directory() . '/lib-gregoire/pre-get-posts.php' );
-
+include_once( get_stylesheet_directory() . '/lib-gregoire/imposer-acf.php' );
 
 
 
