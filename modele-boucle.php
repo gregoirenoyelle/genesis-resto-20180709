@@ -42,7 +42,41 @@ wp_reset_postdata();
 echo $html;
 
 
-
 } // FIN function en_boucle_article()
+
+
+// Boucle de cuisinier
+add_action('genesis_entry_content', 'resto_boucle_cuisinier', 20);
+function resto_boucle_cuisinier() {
+
+// Déclaration des variables
+$html = '';
+
+// article du codex: http://codex.wordpress.org/Class_Reference/WP_Query
+$ma_boucle = new WP_Query (
+	array(
+		'post_type' => 'cuisinier',
+		'orderby' => 'title',
+		'order' => 'ASC',
+		'posts_per_page' => 500
+	)
+); // fin WP_Query 
+
+// d($ma_boucle);
+$html .= '<ul>';
+// Début de ma boucle
+while( $ma_boucle->have_posts() ) : 
+	$ma_boucle->the_post();
+	// Cuisinier dans la boucle
+	$html .= sprintf( '<li><a href="%s">%s</a></li>', get_permalink(), get_the_title() );
+// Fin de ma boucle
+endwhile;
+$html .= '</ul>';
+
+// Afficher le HTML
+echo $html;
+
+}
+
 
 genesis();
