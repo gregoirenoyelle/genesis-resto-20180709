@@ -29,4 +29,17 @@ function resto_widget_cuisinier() {
 }
 add_action('genesis_after_entry', 'resto_widget_cuisinier' );
 
+
+// Afficher les cuisinier
+function resto_afficher_cuisinier() {
+	// Variables
+	$cuisiniers = get_field('selection_cuisinier');
+	// d(get_fields());
+	d($cuisiniers);
+	
+}
+add_action('genesis_after_entry', 'resto_afficher_cuisinier', 9);
+
+
+
 genesis();
