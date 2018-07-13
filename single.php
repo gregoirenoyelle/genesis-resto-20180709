@@ -37,7 +37,7 @@ function resto_afficher_cuisinier() {
 	$cuisiniers = get_field('selection_cuisinier');
 	$titre = get_field('resto_titre_article');
 	// d(get_fields());
-	d($cuisiniers);
+	// d($cuisiniers);
 
 	// Titre 
 	if ( $titre ) {
@@ -95,7 +95,7 @@ function resto_afficher_cuisinier_ids() {
 	// début loop $ma_boucle
 	while ( $ma_boucle->have_posts() ) : $ma_boucle->the_post(); 
 		// Variable de la boucle
-		$img_id = get_field('cuisto_photo', $id);
+		$img_id = get_field('cuisto_photo');
 		$img = wp_get_attachment_image( $img_id, 'cuisinier');
 
 		d($img_id);
